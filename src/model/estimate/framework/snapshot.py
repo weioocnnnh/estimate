@@ -33,6 +33,7 @@ class HypergraphSnapshots:
         lead_lag_mutual_information_hypergraph = self._hypergraph_cora(lead_lag_mutual_information_incidence_matrix)
         self.hypergraph_snapshot.append(lead_lag_mutual_information_hypergraph)
 
+        self.hypergraph_snapshot.append(lead_lag_mutual_information_hypergraph)
     def _convert_incidence_to_adjacency_torch(self, incidence_matrix):
         num_nodes = incidence_matrix.shape[0]
         num_edges = incidence_matrix.shape[1]
