@@ -14,14 +14,17 @@ class HypergraphSnapshots:
         self.s = 1.0
         self.upper = True
         sector_incidence_matrix = self._sector_incidence_matrix()
+        print(sector_incidence_matrix.shape)
         sector_hypergraph = self._hypergraph_cora(sector_incidence_matrix)
         self.hypergraph_snapshot.append(sector_hypergraph)
 
         lead_lag_distance_incidence_matrix = self._lead_lag_distance_incidence_matrix()
+        print(lead_lag_distance_incidence_matrix.shape)
         lead_lag_distance_hypergraph = self._hypergraph_cora(lead_lag_distance_incidence_matrix)
         self.hypergraph_snapshot.append(lead_lag_distance_hypergraph)
 
         lead_lag_pearson_incidence_matrix = self._lead_lag_pearson_incidence_matrix()
+        print(lead_lag_pearson_incidence_matrix.shape)
         lead_lag_pearson_hypergraph = self._hypergraph_cora(lead_lag_pearson_incidence_matrix)
         self.hypergraph_snapshot.append(lead_lag_pearson_hypergraph)
 
